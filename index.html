@@ -12,37 +12,32 @@
 
 <body>
 
-    <div class="container">
+    <div class="site-container">
 
-        <header role="banner">
-            <a class="toggle open" href="#nav">menu</a>
+        <header class="site-header">
             <h2 class="site-title">// Indre J.</h2>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="#">Works</a>
+                    </li>
+                    <li class="divider">/</li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li class="divider">/</li>
+                    <li>
+                        <a href="#">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="list-group">
+                <a href="https://github.com/juodindre"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/juodindre"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            </div>
         </header>
 
-        <nav id="nav" role="navigation">
-            <a class="toggle close" href="#">×</a>
-            <ul>
-                <li>
-                    <a href="#">Works</a>
-                </li>
-                <li class="divider">/</li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li class="divider">/</li>
-                <li>
-                    <a href="#">Resume</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="list-group">
-            <a class="list-group-item" href="https://github.com/juodindre"><i class="fab fa-github"
-                    aria-hidden="true"></i></a>
-            <a class="list-group-item" href="https://www.linkedin.com/in/juodindre"><i class="fab fa-linkedin-in"
-                    aria-hidden="true"></i></a>
-        </div>
-
-        <main class="main-content" role="main">
+        <main class="site-content">
             <section class="index-image">
                 <img src="images/img-01.jpg" alt="Lorem ipsum">
             </section>
@@ -55,11 +50,10 @@
                         <div class="view" href="#" title="Lorem">View project <i class="fas fa-arrow-right"></i></div>
                     </a>
                 </div>
-
             </section>
         </main>
 
-        <footer>
+        <footer class="site-footer">
             <h6><span>Indre Juodziukynaite © 2021</span></h6>
         </footer>
 
@@ -67,4 +61,4 @@
 
 </body>
 
-</html>`
+</html>
