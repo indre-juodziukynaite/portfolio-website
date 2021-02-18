@@ -45,10 +45,8 @@ a {
     grid-template-columns: 1fr;
 }
 
-.site-content {
+.project-card {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
 }
 
 .site-footer {
@@ -76,12 +74,51 @@ a {
 }
 
 @media (min-width: 480px) {
+
     /* --- css for medium width screens */
+    /* --- project cards */
+    .project-container {}
+
+    .project-card {
+        margin: 100px 200px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-areas:
+            "img text";
+        grid-gap: 140px;
+    }
+
+    .project-card img {
+        width: 100%;
+    }
+
+    .project-text h2 {
+        font-size: 46px;
+    }
+
+    .project-text p {
+        font-size: 20px;
+    }
+
+    .project-card:nth-child(even)
+    .project-text {
+        grid-column: 2;
+    }
+
+    .project-card:nth-child(even) img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .project-card:nth-child(even) {
+        grid-template-columns: 1fr 1.5fr;
+    }
 
     /* --- header.site-header grid layout */
     .site-header {
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
 
     .site-title {
@@ -90,9 +127,14 @@ a {
         justify-self: start;
     }
 
-    nav {
+    .site-tagline{
         grid-column: 3 / span 6;
         grid-rows: 2 / 2;
+        justify-self: start;
+    }
+    nav {
+        grid-column: 3 / span 6;
+        grid-rows: 3 / 3;
         justify-self: start;
     }
 
@@ -100,22 +142,6 @@ a {
         grid-column: 9 / 11;
         grid-rows: 2 / 2;
         justify-self: end;
-    }
-
-    /* --- main.site-content grid layout */
-    .site-content {
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-    }
-
-    .index-image {
-        grid-column: 3 / 11;
-        grid-row: 1 / span 6;
-    }
-
-    .image-details {
-        grid-column: 4 / span 7;
-        grid-row: 2 / span 3;
     }
 
     /* --- footer.site-footer grid layout */
