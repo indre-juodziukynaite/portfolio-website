@@ -50,6 +50,7 @@ a {
 .project-card,
 .site-footer {
     display: grid;
+    margin: 0 0 5px 0;
 }
 
 /* --- navigation */
